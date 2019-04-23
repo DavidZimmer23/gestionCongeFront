@@ -1,0 +1,15 @@
+
+  <p-calendar
+ [(ngModel)]="rangeDates"
+ selectionMode="range"
+ readonlyInput="true"
+     [inline]="true"
+      [locale]="fr"
+      [disabledDates]="invalidDates" [disabledDays]="[0,6]">
+    </p-calendar>
+<div>
+  Your range of date: <span *ngFor='let rangeDate of rangeDates'>{{rangeDate | date: 'dd/MM/yy'}}</span>
+</div>
+
+
+<router-outlet></router-outlet>
