@@ -9,11 +9,7 @@ import { CalendrierComponent } from './calendrier/calendrier.component';
 
 import {CalendarModule} from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-
-
-
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -26,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     CalendarModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

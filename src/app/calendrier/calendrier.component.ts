@@ -11,11 +11,8 @@ export class CalendrierComponent implements OnInit {
   constructor() { }
 
   rangeDates: Date[];
-
   invalidDates: Array<Date>;
-
   fr: any;
-
 
   ngOnInit() {
     this.fr = {
@@ -34,5 +31,9 @@ export class CalendrierComponent implements OnInit {
     invalidDate.setDate(today.getDate());
     this.invalidDates = [today, invalidDate];
   }
+
+  handleClick() {
+
+}
 
 }

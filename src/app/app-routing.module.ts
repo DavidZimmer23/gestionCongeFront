@@ -1,4 +1,3 @@
-import { CalendrierComponent } from './calendrier/calendrier.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

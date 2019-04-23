@@ -1,15 +1,15 @@
 
-  <p-calendar
- [(ngModel)]="rangeDates"
- selectionMode="range"
- readonlyInput="true"
-     [inline]="true"
-      [locale]="fr"
-      [disabledDates]="invalidDates" [disabledDays]="[0,6]">
-    </p-calendar>
-<div>
-  Your range of date: <span *ngFor='let rangeDate of rangeDates'>{{rangeDate | date: 'dd/MM/yy'}}</span>
-</div>
-
-
+  <p-calendar calendrierConge
+    [(ngModel)]="dateRangeSel"
+    selectionMode="range"
+    readonlyInput="true"
+    [inline]="true"
+    [locale]="fr"
+    [disabledDates]="invalidDates"
+    [disabledDays]="[0,6]"
+    dateFormat="dd-mm-yy">
+     <p-footer>
+       <p-button label="Valider" (onClick)="handleClick($event)"></p-button>
+     </p-footer>
+ </p-calendar>
 <router-outlet></router-outlet>
