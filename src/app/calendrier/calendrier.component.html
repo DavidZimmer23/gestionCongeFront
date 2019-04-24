@@ -1,14 +1,8 @@
-  <p-calendar 
-    [(ngModel)]="RangeDates"
-    selectionMode="range"
-    readonlyInput="true"
-    [inline]="true"
-    [locale]="fr"
-    [disabledDates]="invalidDates"
-    [disabledDays]="[0,6]"
-    dateFormat="dd-mm-yy">
-     <p-footer>
-       <p-button label="Valider" (onClick)="handleClick($event)"></p-button>
-     </p-footer>
- </p-calendar>
-<router-outlet></router-outlet>
+<ejs-daterangepicker 
+id='daterangepicker' 
+placeholder='Select a range' 
+[startDate]='start' 
+[endDate]='end'>
+</ejs-daterangepicker>
+
+
