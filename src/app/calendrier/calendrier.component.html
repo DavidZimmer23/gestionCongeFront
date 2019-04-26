@@ -1,6 +1,9 @@
 <ejs-daterangepicker 
 id='daterangepicker' 
-placeholder='Select a range' 
+placeholder='Selectionner vos dates de conges ' 
+[firstDayOfWeek]='startDay'
+(renderDayCell)='disableDate($event)'
+[format]='dateFormat'
 [startDate]='start' 
 [endDate]='end'>
 </ejs-daterangepicker>
