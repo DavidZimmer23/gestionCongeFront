@@ -10,11 +10,14 @@ import { CalendrierComponent } from './calendrier/calendrier.component';
 import {CalendarModule} from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ButtonModule} from 'primeng/button';
+import { EmployeComponent } from './employe/employe.component';
+import { EmployeService } from './shared/services/employe.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalendrierComponent
+    CalendrierComponent,
+    EmployeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import {ButtonModule} from 'primeng/button';
     HttpClientModule,
     ButtonModule
   ],
-  providers: [],
+  providers: [EmployeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
