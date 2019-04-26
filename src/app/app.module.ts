@@ -7,12 +7,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { ConnexionService } from './shared/service/connexion/connexion.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeComponent } from './employe/employe.component';
+import { EmployeService } from './shared/services/employe.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendrierComponent,
+
     ConnexionComponent,
+    EmployeComponent
+
   ],
   imports: [
     BrowserModule,
@@ -20,7 +25,11 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ConnexionService],
+
+  providers: [ConnexionService, EmployeService],
   bootstrap: [AppComponent],
+
+
+
 })
 export class AppModule { }

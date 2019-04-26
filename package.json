@@ -22,6 +22,7 @@
     "@syncfusion/ej2-angular-calendars": "^17.1.42",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "jquery": "^3.4.0",
     "primeicons": "^1.0.0",
     "primeng": "^7.1.0",
     "rxjs": "~6.3.3",

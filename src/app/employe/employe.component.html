@@ -1,0 +1,26 @@
+<p>
+  employe works!
+</p>
+<div class="row">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h5 style="color:gray">Liste des employes</h5>
+        <br>
+        employes d'une liste d'employes
+        <table border="1">
+          <thead class="thead-light">
+            <th>Nom</th>
+            <th>Prenom</th>
+          </thead>
+          <tr *ngFor="let employe of employes">
+
+            <td>{{ employe.nom }}</td>
+            <td>{{ employe.prenom }}</td>
+          </tr>
+        </table>
+        <button type="button" class="btn btn-success" (click)="connexion()">connexion</button>
+      </div>
+    </div>
+  </div>
+</div>
