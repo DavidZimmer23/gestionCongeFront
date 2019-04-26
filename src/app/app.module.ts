@@ -8,16 +8,14 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { ConnexionService } from './shared/service/connexion/connexion.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeComponent } from './employe/employe.component';
-import { EmployeService } from './shared/services/employe.service';
+import { EmployeService } from './shared/service/employe.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendrierComponent,
-
     ConnexionComponent,
     EmployeComponent
-
   ],
   imports: [
     BrowserModule,
@@ -28,8 +26,5 @@ import { EmployeService } from './shared/services/employe.service';
 
   providers: [ConnexionService, EmployeService],
   bootstrap: [AppComponent],
-
-
-
 })
 export class AppModule { }

@@ -8,12 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class ConnexionService {
 
-  URL = 'http://localhost:8088/restlogin';
+  URL = 'http://localhost:8080/restlogin';
 
   constructor(private http: HttpClient) { }
 
-  login(login, motDePasse) {
-    return this.http.get<any>(this.URL + '/login' + login + motDePasse );
-
+  public connexion(login, motDePasse) {
+    return this.http.get<any>(this.URL + '/connexion/' + login + '/' + motDePasse);
   }
 }

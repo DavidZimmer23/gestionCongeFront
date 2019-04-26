@@ -8,7 +8,7 @@ export class CalendrierService {
 
   URL = 'http://localhost:8088//rest';
 private apiUrl = '/api/calendrier';
-  constructor(private http: Http) { }
+  constructor() { }
 
-  createConge(Date, Date) : {}
+
 }

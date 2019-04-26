@@ -1,5 +1,5 @@
 <h2>Connexion</h2>
-<form [formGroup]="connexionForm" (ngSubmit)=form (ngSubmit)="onSubmit()">
+<form [formGroup]="connexionForm" (ngSubmit)=form (ngSubmit)="connexion()">
     <div class="form-group">
         <label for="user">Identifiant</label>
         <input type="text" name="login" formControlName="login" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.login.errors }" />

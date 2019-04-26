@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeService } from '../shared/services/employe.service';
+import { EmployeService } from '../shared/service/employe.service';
 import { Observable } from 'rxjs';
-import { ConnexionService } from '../shared/services/connexion.service';
+import { ConnexionService } from '../shared/service/connexion/connexion.service';
 
 
 @Component({

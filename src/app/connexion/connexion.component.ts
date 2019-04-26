@@ -13,9 +13,10 @@ export class ConnexionComponent implements OnInit {
   connexionForm: FormGroup = new FormGroup({});
   login: string;
   motDePasse: string;
+  connect: any;
 
 
-  constructor(private connexionService: ConnexionService) { }
+  constructor(private connexionService: ConnexionService, private conserv: ConnexionService) { }
 
   ngOnInit() {
     this.connexionForm = new FormGroup({
@@ -26,10 +27,11 @@ export class ConnexionComponent implements OnInit {
   onSubmit() {
     console.log(this.connexionForm.value);
 }
-  log() {
-    this.connexionService.login(this.connexionForm.value)
-      .subscribe(response => {
-        console.log(response.body);
+connexion(): any {
+  return this.conserv.connexion(this.connexionForm.value.login, this.connexionForm.value.motDePasse)
+  .subscribe((value: any) => {
+    this.connect = value;
+    console.log(this.connect);
       });
 
 }}
