@@ -1,3 +1,11 @@
-<app-calendrier></app-calendrier>
-<app-employe></app-employe>
+<!-- <app-calendrier></app-calendrier> -->
+<div *ngIf="employeConnecte; then appEmp; else login"></div>
+<ng-template #appEmp>
+    employeConnecte : {{ employeConnecte }}
+    <app-home></app-home>
+</ng-template>
+<ng-template #login>
+    employeConnecte : {{ employeConnecte }}
+    <app-login></app-login>
+</ng-template>
 <router-outlet></router-outlet>

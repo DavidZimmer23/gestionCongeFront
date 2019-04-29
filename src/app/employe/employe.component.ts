@@ -12,9 +12,8 @@ import { ConnexionService } from '../shared/services/connexion.service';
 export class EmployeComponent implements OnInit {
 
   employes: any[];
-  connecte: any;
-
-  constructor(private empService: EmployeService, private conServ: ConnexionService) { }
+  empById: any = {nom: 'nom par default', prenom: 'prenom par default'};
+  constructor(private empService: EmployeService) { }
 
   ngOnInit() {
     this.getAllEmployes();
@@ -28,11 +27,11 @@ export class EmployeComponent implements OnInit {
       });
   }
 
-  connexion(): any {
-    return this.conServ.connexion('Manu', 'Remy')
-    .subscribe((value: any) => {
-      this.connecte = value;
-      console.log(this.connecte);
-    });
+  getEmployeById(id) {
+    this.empService.getEmployeById(id)
+      .subscribe((value: any) => {
+        this.empById = value;
+        console.log(this.empById);
+      });
   }
 }

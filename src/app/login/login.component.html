@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">app-login</h5>
+      <div class="card-body">
+        <p>
+          sessionItem : {{ sessionItem }}
+          <br>
+        </p>
+        <p>
+          JSON Stringified Item : {{ JSONItem }}
+          <br>
+          JSON Stringified Item.nom : {{ JSONItem.nom }}
+          <br>
+        </p>
+        <p>
+          connecte : {{ connecte }}
+          <br>
+        </p>
+        <input [(ngModel)]="login" /> login : {{ login }}
+        <br>
+        <input [(ngModel)]="mdp" /> mdp : {{ mdp }}
+        <br>
+        <button type="button" class="btn btn-success" (click)="connexion(login, mdp)">connexion</button>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

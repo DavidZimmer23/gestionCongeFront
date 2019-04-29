@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+table {
+    text-align: center;
+}
+td, th {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.employeData {
+    border: solid red 5px;
+    margin: 50px;
+}
+
+.calendrier {
+    border: solid blue 5px;
+    width: 40%;
+    float: left;
+    margin: 50px;
+}
+
+.notif {
+    border: solid green 5px;    
+    width: 40%;
+    float: left;
+    margin: 50px;
+}

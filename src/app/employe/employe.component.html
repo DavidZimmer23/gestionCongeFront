@@ -1,10 +1,19 @@
-<p>
-  employe works!
-</p>
 <div class="row">
   <div class="container">
     <div class="card">
+        <h5 class="card-title">app-employe</h5>
       <div class="card-body">
+        <p>
+          empById : {{ empById }}
+          <br>
+          empById.prenom : {{ empById.prenom }}
+          <br>
+          empById.nom : {{ empById.nom }}
+        </p>
+        <input [(ngModel)]="id" />
+        <br>
+        <button type="button" class="btn btn-success" (click)="getEmployeById(id)">get by id</button>
+
         <h5 style="color:gray">Liste des employes</h5>
         <br>
         employes d'une liste d'employes
@@ -19,7 +28,6 @@
             <td>{{ employe.prenom }}</td>
           </tr>
         </table>
-        <button type="button" class="btn btn-success" (click)="connexion()">connexion</button>
       </div>
     </div>
   </div>

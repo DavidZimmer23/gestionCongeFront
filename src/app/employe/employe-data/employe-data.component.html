@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="container">
+      <div class="card">
+        <h5 class="card-title">app-employe-data</h5>
+        <div class="card-body">
+          <table border="1">
+              <tr>
+                <th>ID</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Grade</th>
+                <th>Adresse Mail</th>
+                <th>N° de Téléphone</th>
+                <th>Jours de Congés Restants</th>
+                <th *ngIf="employe.manager">Manager</th>
+              </tr>
+              <tr>
+                <td>{{ employe.idEmploye }}</td>
+                <td>{{ employe.prenom }}</td>
+                <td>{{ employe.nom }}</td>
+                <td>{{ employe.grade }}</td>
+                <td>{{ employe.adresseMail }}</td>
+                <td>{{ employe.numeroTelephone }}</td>
+                <td>{{ employe.joursCongeRestant }}</td>
+                <td *ngIf="employe.manager">{{ employe.manager.prenom }} {{ employe.manager.nom }}</td>
+              </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

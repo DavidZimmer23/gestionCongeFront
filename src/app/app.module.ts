@@ -13,11 +13,21 @@ import {ButtonModule} from 'primeng/button';
 import { EmployeComponent } from './employe/employe.component';
 import { EmployeService } from './shared/services/employe.service';
 
+import { StorageServiceModule} from 'angular-webstorage-service';
+import { LoginComponent } from './login/login.component';
+import { EmployeDataComponent } from './employe/employe-data/employe-data.component';
+import { HomeComponent } from './home/home.component';
+import { NotifComponent } from './notif/notif.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CalendrierComponent,
-    EmployeComponent
+    EmployeComponent,
+    LoginComponent,
+    EmployeDataComponent,
+    HomeComponent,
+    NotifComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +36,8 @@ import { EmployeService } from './shared/services/employe.service';
     CalendarModule,
     FormsModule,
     HttpClientModule,
-    ButtonModule
+    ButtonModule,
+    StorageServiceModule
   ],
   providers: [EmployeService],
   bootstrap: [AppComponent]

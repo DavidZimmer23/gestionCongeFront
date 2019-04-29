@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">app-notif</h5>
+      <div class="card-body">
+        <table border="1">
+          <tr>
+            <th>Date de début</th>
+            <th>Date de fin</th>
+            <th>nombre de jours</th>
+            <th>statut</th>
+          </tr>
+          <tr *ngFor="let conge of listeConges">
+            <td>{{ conge.dateDebut }}</td>
+            <td>{{ conge.dateFin }}</td>
+            <td>{{ conge.dureeJours }}</td>
+            <td>{{ conge.statutDeLaDemande }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
